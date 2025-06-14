@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 28, 2025 at 04:02 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Host: 127.0.0.1:4307
+-- Waktu pembuatan: 14 Jun 2025 pada 09.18
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `author`
+-- Struktur dari tabel `author`
 --
 
 CREATE TABLE `author` (
@@ -34,7 +34,7 @@ CREATE TABLE `author` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `author`
+-- Dumping data untuk tabel `author`
 --
 
 INSERT INTO `author` (`author_id`, `name`, `nationality`) VALUES
@@ -84,7 +84,7 @@ INSERT INTO `author` (`author_id`, `name`, `nationality`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `books`
+-- Struktur dari tabel `books`
 --
 
 CREATE TABLE `books` (
@@ -97,23 +97,23 @@ CREATE TABLE `books` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `books`
+-- Dumping data untuk tabel `books`
 --
 
 INSERT INTO `books` (`book_id`, `title`, `cover`, `availability`, `genre_id`, `author_id`) VALUES
-(1, 'Romeo and Juliet', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//RomeoAndJuliet.jpg', 'available', 1, 36),
+(1, 'Romeo and Juliet', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//RomeoAndJuliet.jpg', 'unavailable', 1, 36),
 (2, 'The Lost World', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//TheLostWorld.jpg', 'available', 1, 5),
 (3, 'Adventures of Pinocchio', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//AdventuresOfPinocchio.jpg', 'available', 1, 6),
-(4, 'The Return of Sherlock Holmes', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//TheReturnOfSherlockHolmes.jpg', 'available', 1, 5),
+(4, 'The Return of Sherlock Holmes', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//TheReturnOfSherlockHolmes.jpg', 'unavailable', 1, 5),
 (5, 'Kita Pergi Hari Ini', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//KitaPergiHariIni.jpg', 'available', 1, 37),
 (6, 'Laut Bercerita', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//LautBercerita.jpg', 'available', 1, 19),
-(7, 'Bumi Manusia', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//BumiManusia.jpg', 'available', 1, 29),
+(7, 'Bumi Manusia', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//BumiManusia.jpg', 'unavailable', 1, 29),
 (8, 'The Perfect World of Miwako Sumida', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//ThePerfectWorldOfMS.jpg', 'available', 1, 8),
 (9, 'The Midnight Library', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//TheMidnightLibrary.jpg', 'available', 1, 20),
 (10, 'Murder on the Orient Express', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//MurderOnTheOrientExpress.jpg', 'available', 1, 1),
 (11, 'Tiga dalam Kayu', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//TigaDalamKayu.jpg', 'available', 1, 37),
 (12, 'Brianna dan Bottomwise', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//BriannaDanBottomwise.jpg', 'available', 1, 4),
-(13, 'Aroma Karsa', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//AromaKarsa.jpg', 'available', 1, 11),
+(13, 'Aroma Karsa', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//AromaKarsa.jpg', 'unavailable', 1, 11),
 (14, 'Negeri 5 Menara', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//Negeri5Menara.jpg', 'available', 1, 2),
 (15, 'Gadis Kretek', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//GadisKretek.jpg', 'available', 1, 30),
 (16, 'Pulang', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//Pulang.jpg', 'available', 1, 19),
@@ -123,14 +123,14 @@ INSERT INTO `books` (`book_id`, `title`, `cover`, `availability`, `genre_id`, `a
 (20, 'Supernova: Petir', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//SupenovaPetir.jpg', 'available', 1, 11),
 (21, 'Supernova: Akar', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//SupernovaAkar.jpg', 'available', 1, 11),
 (22, '5 cm', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//5cm.jpg', 'available', 1, 12),
-(23, 'Omniscient Reader\'s Viewpoint', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//OmniscientReadersViewpoint.jpg', 'available', 1, 32),
-(24, 'Bungou Stray Dogs: Beast', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//BungouStrayDogsBeast.jpg', 'available', 1, 17),
+(23, 'Omniscient Reader\'s Viewpoint', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//OmniscientReadersViewpoint.jpg', 'unavailable', 1, 32),
+(24, 'Bungou Stray Dogs: Beast', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//BungouStrayDogsBeast.jpg', 'unavailable', 1, 17),
 (25, 'Polaris Musim Dingin', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//BungouStrayDogsBeast.jpg', 'available', 1, 38),
 (26, 'Filosofi Teras', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//FilosofiTeras.jpg', 'available', 3, 13),
 (27, 'Mindset', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//Mindset.png', 'available', 3, 7),
-(28, 'Atomic Habits', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//AtomicHabits.jpg', 'available', 3, 15),
+(28, 'Atomic Habits', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//AtomicHabits.jpg', 'unavailable', 3, 15),
 (29, 'The Psychology of Money', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//ThePsychologyOfMoney.jpg', 'available', 3, 24),
-(30, 'Love for Imperfect Things', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//LoveForImperfectThings.jpg', 'available', 3, 39),
+(30, 'Love for Imperfect Things', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//LoveForImperfectThings.jpg', 'unavailable', 3, 39),
 (31, 'Maaf Tuhan, Aku Hampir Menyerah', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//MaafTuhanAkuHampirMenyerah.jpg', 'available', 3, 3),
 (32, 'The Subtle Art of Not Giving A F*ck', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//TheSubtleArtNotGivingAFk.png', 'available', 3, 22),
 (33, 'How to Win Friends and Influence People', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//HowWinFriendsInfluencePeople.png', 'available', 3, 9),
@@ -146,7 +146,7 @@ INSERT INTO `books` (`book_id`, `title`, `cover`, `availability`, `genre_id`, `a
 (43, 'Introduction to Linear Algebra (5th Ed)', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//LinearAlgebra.jpg', 'available', 2, 14),
 (44, 'The Shallows', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//TheShallows.png', 'available', 2, 26),
 (45, 'Algorithm to Live By: The Computer Science of Human Decision', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//AlgorithmLiveBy.jpg', 'available', 2, 34),
-(46, 'Computer Architecture: A Quantitive Approach', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//ComputerArchitecture.jpg', 'available', 2, 10),
+(46, 'Computer Architecture: A Quantitive Approach', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//ComputerArchitecture.jpg', 'unavailable', 2, 10),
 (47, 'The Death of Expertise', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//TheDeathExpertise.jpg', 'available', 2, 35),
 (48, 'What Technology Wants', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//WhatTechnologyWants.jpg', 'available', 2, 18),
 (49, 'Future Shock', 'https://velbtboswdhgpqjriinc.supabase.co/storage/v1/object/public/booki.library//FutureShock.jpg', 'available', 2, 42),
@@ -155,7 +155,7 @@ INSERT INTO `books` (`book_id`, `title`, `cover`, `availability`, `genre_id`, `a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `borrower`
+-- Struktur dari tabel `borrower`
 --
 
 CREATE TABLE `borrower` (
@@ -166,17 +166,26 @@ CREATE TABLE `borrower` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `borrower`
+-- Dumping data untuk tabel `borrower`
 --
 
 INSERT INTO `borrower` (`borrower_id`, `name`, `phone`, `id_number_borrower`) VALUES
 (1, 'Alya Putri', '081234567890', '23/899179/TK/93808'),
-(2, 'Rafi Hidayat', '082233445566', '22/397721/EK/66288');
+(2, 'Rafi Hidayat', '082233445566', '22/397721/EK/66288'),
+(3, 'Atalie Savista Arunataaaaa', '081226882099', '23/522436/TK/57668'),
+(4, 'Takumi Usui', '082137350781', '351517923413123'),
+(5, 'Makino Tsukushi', '08124385944', '5333359382923'),
+(6, 'Rui Kanazawa', '081443789272', '43368798787007'),
+(7, 'Sherlock Holmes', '087852404632', '9999991191'),
+(8, 'Oppenheimer', '062993883933', '4222489993832'),
+(9, 'Vista Arunata', '081226882744', '93721937361912'),
+(10, 'Petra Atalie Savista', '0813323134423', '4332312314'),
+(11, 'Atalie Savista Arunata', '0812321331', '02128203821');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `genre`
+-- Struktur dari tabel `genre`
 --
 
 CREATE TABLE `genre` (
@@ -185,7 +194,7 @@ CREATE TABLE `genre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `genre`
+-- Dumping data untuk tabel `genre`
 --
 
 INSERT INTO `genre` (`genre_id`, `name`) VALUES
@@ -196,7 +205,7 @@ INSERT INTO `genre` (`genre_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loan`
+-- Struktur dari tabel `loan`
 --
 
 CREATE TABLE `loan` (
@@ -209,17 +218,31 @@ CREATE TABLE `loan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `loan`
+-- Dumping data untuk tabel `loan`
 --
 
 INSERT INTO `loan` (`loan_id`, `borrower_id`, `loan_date`, `due_date`, `return_status`, `note`) VALUES
 (1, 1, '2025-05-01', '2025-05-08', 'returned', NULL),
-(2, 2, '2025-05-05', '2025-05-15', 'not returned', NULL);
+(2, 2, '2025-05-05', '2025-05-15', 'not returned', NULL),
+(3, 3, '2025-06-13', '2025-06-20', 'not returned', 'Minjem dulu bos, bayar nanti'),
+(4, 4, '2025-06-20', '2025-06-27', 'not returned', 'Pinjam dulu, nanti kukembalikan'),
+(5, 5, '2025-06-07', '2025-06-14', '', NULL),
+(6, 6, '2025-06-20', '2025-06-27', 'returned', NULL),
+(7, 7, '2025-06-22', '2025-06-29', 'not returned', 'Will return it soon!'),
+(8, 8, '2025-06-19', '2025-06-26', 'not returned', NULL),
+(9, 8, '2025-06-18', '2025-06-28', 'returned', NULL),
+(10, 8, '2025-06-19', '2025-06-26', 'not returned', NULL),
+(11, 9, '2025-06-29', '2025-07-09', 'returned', 'Meminjam 3 buku dan akan dikembalikan di Perpus FT'),
+(12, 9, '2025-06-30', '2025-07-07', 'not returned', 'Meminjam 3 buku dan akan dikembalikan di Perpus FT'),
+(14, 10, '2025-06-16', '2025-06-28', 'not returned', 'Meminjam buku dahulu'),
+(15, 10, '2025-06-15', '2025-06-29', 'returned', 'Meminjam buku dahulu'),
+(16, 11, '2025-06-17', '2025-07-03', 'returned', 'Meminjam 2 buku'),
+(17, 11, '2025-06-18', '2025-06-30', 'not returned', 'Meminjam 2 buku');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loan_book`
+-- Struktur dari tabel `loan_book`
 --
 
 CREATE TABLE `loan_book` (
@@ -230,26 +253,40 @@ CREATE TABLE `loan_book` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `loan_book`
+-- Dumping data untuk tabel `loan_book`
 --
 
 INSERT INTO `loan_book` (`loan_id`, `book_id`, `return_date`, `returned`) VALUES
 (1, 6, '2025-05-07', 1),
 (1, 17, '2025-05-07', 1),
-(2, 39, NULL, 0);
+(2, 39, NULL, 0),
+(3, 4, '2025-06-04', 1),
+(4, 24, '2025-06-05', 1),
+(5, 7, '2025-06-14', 0),
+(6, 28, '2025-06-05', 1),
+(7, 4, '2025-06-29', 0),
+(8, 28, '2025-06-26', 0),
+(9, 33, '2025-06-06', 1),
+(10, 46, '2025-06-26', 0),
+(11, 9, '2025-06-14', 1),
+(12, 24, '2025-07-07', 0),
+(14, 13, '2025-06-28', 0),
+(15, 26, '2025-06-14', 1),
+(16, 27, '2025-06-14', 1),
+(17, 23, '2025-06-30', 0);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `author`
+-- Indeks untuk tabel `author`
 --
 ALTER TABLE `author`
   ADD PRIMARY KEY (`author_id`);
 
 --
--- Indexes for table `books`
+-- Indeks untuk tabel `books`
 --
 ALTER TABLE `books`
   ADD PRIMARY KEY (`book_id`),
@@ -257,85 +294,85 @@ ALTER TABLE `books`
   ADD KEY `fk_books_author` (`author_id`);
 
 --
--- Indexes for table `borrower`
+-- Indeks untuk tabel `borrower`
 --
 ALTER TABLE `borrower`
   ADD PRIMARY KEY (`borrower_id`),
-  ADD UNIQUE KEY `phone` (`phone`);
+  ADD KEY `phone` (`phone`) USING BTREE;
 
 --
--- Indexes for table `genre`
+-- Indeks untuk tabel `genre`
 --
 ALTER TABLE `genre`
   ADD PRIMARY KEY (`genre_id`);
 
 --
--- Indexes for table `loan`
+-- Indeks untuk tabel `loan`
 --
 ALTER TABLE `loan`
   ADD PRIMARY KEY (`loan_id`),
   ADD KEY `fk_loan_borrower` (`borrower_id`);
 
 --
--- Indexes for table `loan_book`
+-- Indeks untuk tabel `loan_book`
 --
 ALTER TABLE `loan_book`
   ADD PRIMARY KEY (`loan_id`,`book_id`),
   ADD KEY `fk_loanbook_book` (`book_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `author`
+-- AUTO_INCREMENT untuk tabel `author`
 --
 ALTER TABLE `author`
   MODIFY `author_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT for table `books`
+-- AUTO_INCREMENT untuk tabel `books`
 --
 ALTER TABLE `books`
   MODIFY `book_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
--- AUTO_INCREMENT for table `borrower`
+-- AUTO_INCREMENT untuk tabel `borrower`
 --
 ALTER TABLE `borrower`
-  MODIFY `borrower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `borrower_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `genre`
+-- AUTO_INCREMENT untuk tabel `genre`
 --
 ALTER TABLE `genre`
   MODIFY `genre_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `loan`
+-- AUTO_INCREMENT untuk tabel `loan`
 --
 ALTER TABLE `loan`
-  MODIFY `loan_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `loan_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `books`
+-- Ketidakleluasaan untuk tabel `books`
 --
 ALTER TABLE `books`
   ADD CONSTRAINT `fk_books_author` FOREIGN KEY (`author_id`) REFERENCES `author` (`author_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_books_genre` FOREIGN KEY (`genre_id`) REFERENCES `genre` (`genre_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `loan`
+-- Ketidakleluasaan untuk tabel `loan`
 --
 ALTER TABLE `loan`
   ADD CONSTRAINT `fk_loan_borrower` FOREIGN KEY (`borrower_id`) REFERENCES `borrower` (`borrower_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `loan_book`
+-- Ketidakleluasaan untuk tabel `loan_book`
 --
 ALTER TABLE `loan_book`
   ADD CONSTRAINT `fk_loanbook_book` FOREIGN KEY (`book_id`) REFERENCES `books` (`book_id`) ON DELETE CASCADE ON UPDATE CASCADE,
